@@ -1,8 +1,56 @@
-.navbar.navbar-default.navbar-fixed-top {
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.navbar.navbar-default {
     background-color: #fff;
-    border-bottom: 0px;
+    border-radius: 0;
+    border: 0;
 }
 
 .navbar-default .navbar-brand {
-    color: #d80;
+    color: #09f;
+}
+
+ .navbar-default .navbar-brand:hover {
+     color:#0bf;
+ }
+
+.navbar-default .navbar-nav > li > a {
+    border-bottom: 1px solid white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color:#09f;
+    border-bottom: 1px solid #09f;
+}
+
+.jumbotron {
+    background-color: #09f;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.formTimes, .formConfig, .puff {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+input {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.btn.btn-default.btn-block {
+    margin-bottom: 10px;
 }
