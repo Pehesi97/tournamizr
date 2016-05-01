@@ -54,3 +54,16 @@ h2 {
 .btn.btn-default.btn-block {
     margin-bottom: 10px;
 }
+
+.ng-dirty .ng-invalid {
+    border-color: red;
+}
+
+.panel .table {
+    color: #000;
+}
+
+.errorCreate {
+    border-radius: 4px;
+    background-color: #d00;
+}
