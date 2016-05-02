@@ -51,7 +51,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn.btn-default.btn-block {
+.btn.btn-primary.btn-block {
     margin-bottom: 10px;
 }
 
@@ -61,9 +61,4 @@ h2 {
 
 .panel .table {
     color: #000;
-}
-
-.errorCreate {
-    border-radius: 4px;
-    background-color: #d00;
 }

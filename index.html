@@ -21,8 +21,7 @@
         </nav>
         <div class="container-fluid text-center">
             <div class="row content">
-                <div class="col-sm-4 sidenav">
-
+                <div class="col-sm-4">
                 </div>
                 <div class="col-sm-4 text-center" ng-controller="TabsController as tabs">
                     <div class="jumbotron">
@@ -35,25 +34,24 @@
                                 <input type="number" id="players" name="players" min="5" max="11" class="form-control" ng-model="time.players">
                                 <button type="button" class="btn btn-primary btn-block" ng-click="time.create(tabs, times)">Criar Times!</button>
                                 <label class="puff" ng-show="time.randomizing === 1">Randomização em andamento...</label>
-                                <label class="puff errorCreate " ng-show="time.errorCreate">Não há tantos jogadores!</label>
+                                <div class="alert alert-danger puff errorCreate" ng-show="time.errorCreate">Não há tantos jogadores!</div>
                                 <div class="progress puff" ng-show="time.randomizing === 1">
-                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="time.createProgress" aria-valuemin="0" aria-valuemax="100" ng-style="{ 'width': time.createProgress }">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="time.progress" aria-valuemin="0" aria-valuemax="100" ng-style="{ 'width': time.createProgress }">
                                         {{time.createProgress}}
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        <div ng-show="tabs.isShown(2)" class="container-fluid puff">
+                        <div ng-show="tabs.isShown(2)" class="puff">
                             <div class="col-sm-6" ng-repeat="time in times.times">
                                 <div class="panel panel-info">
-                                    <!-- Default panel contents -->
                                     <div class="panel-heading">Time {{time.id}}</div>
                                     <table class="table">
                                         <tr ng-repeat="jogador in time.jogadores"><td>{{jogador}}</td></tr>
                                     </table>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary btn-block" ng-click="tabs.setTab = 1">Voltar</button>
+                            <button type="button" class="btn btn-primary btn-block" ng-click="tabs.setTab = 1; times.reset()">Voltar</button>
                         </div>
                     </div>
                 </div>

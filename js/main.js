@@ -50,8 +50,11 @@
 
                 for(c = 1; c < that.players; c++)
                 {
+                    this.counter = 0;
                     r = Math.floor((Math.random() * (this.possibleIndexes.length)));
                     this.playerArray.push(that.jogadores[this.possibleIndexes[r]].name);
+                    that.progress += that.step;
+                    that.createProgress = that.progress + '%';
                     this.possibleIndexes.splice(r, 1);
                 }
                 times.addTime(this.playerArray);
@@ -93,6 +96,11 @@
 
             that.times.push(time);
             that.lastId++;
+        }
+
+        this.reset = function() {
+            that.times = [ ];
+            that.lastId = 1;
         }
 
     });
