@@ -4,9 +4,9 @@
 
 ## Como usar
 
-+Edite o arquivo *data/players.json* usando os nomes dos jogadores disponíveis;
-+Configure o número de jogadores e de times;
-+Randomizd.
++ Edite o arquivo *data/players.json* usando os nomes dos jogadores disponíveis;
++ Configure o número de jogadores e de times;
++ Randomizd.
 
 ## Detalhes do projeto
 
